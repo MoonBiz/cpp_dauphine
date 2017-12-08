@@ -1,6 +1,6 @@
 #ifndef POLYNOMIAL_HPP
 #define POLYNOMIAL_HPP
-
+#include <vector>
 namespace dauphine
 {
     // The goal of ths exercise is to implement
@@ -38,6 +38,7 @@ namespace dauphine
     // std::cout << p << std::endl should print:
     // 3. X^4 + 2. X^2 + 1.
     
+	
     // Phase 2
     // - Implement the unary minus operation
     // - Implement the addition and substraction operations for polynomials.
@@ -64,6 +65,15 @@ namespace dauphine
     // - Implement the euclidian division of polynomials
     //     operator/ returns the quotient
     //     operator% returns the remainder
+	class polynomial
+	{
+	public:
+		polynomial(double d_Degree);
+		polynomial(std::vector<double> d_coefficients);
+	private:
+		double m_d_degree;
+		std::vector<double> m_d_coefficients;
+	};
 }
 
 #endif

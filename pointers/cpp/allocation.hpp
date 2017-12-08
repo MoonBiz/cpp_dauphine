@@ -6,8 +6,8 @@
 
 namespace dauphine
 {
-    /*
-    class volatility
+    
+	/* class volatility
     {
     public:
 
@@ -45,8 +45,8 @@ namespace dauphine
         underlying* p_underlying;
         volatility* p_volatility;
     };
-    */
-
+    
+	*/
     // PART 2
     
     class data_model;
@@ -87,6 +87,17 @@ namespace dauphine
         product_ptr p_product;
         data_model_ptr p_data;
     };
+	void product::set_data_model(data_model_ptr)
+	{
+		p_data = data_model_ptr;
+	}
+
+	pricer::pricer(product_ptr prod, data_model_ptr data)
+		: p_product(prod), p_data(data)
+	{
+		p_product->set_data_model(p_data);
+		std::cout << "pricer constructor" << std::endl;
+	}
 }
 
 #endif

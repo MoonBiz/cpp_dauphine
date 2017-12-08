@@ -20,5 +20,7 @@ namespace dauphine
         std::cout << "resource::print_message STATUS" << std::endl;
         std::cout << "resource::print_message END" << std::endl;
     }
+
+
 }
 

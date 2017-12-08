@@ -2,13 +2,33 @@
 
 namespace dauphine
 {
-    /*
-    volatility::volatility()
+    
+    /*volatility::volatility()
     {
         std::cout << "volatility constructor" << std::endl;
     }
 
-    volatility::~volatility()
+	underlying::underlying(volatility* vol)
+		: p_volatility(vol)
+	{
+		std::cout << "volatility constructor" << std::endl;
+	}
+	underlying::~underlying()
+	{
+		std::cout << "volatility destructor" << std::endl;
+		delete p_volatility
+	}
+	option::option(underlying* u, volatility* vol)
+		: p_underlying(u), p_volatility(vol)
+	{
+		std::cout << "option constructor" << std::endl;
+	}
+	option::~option()
+	{
+		std::cout << "option destructor" << std::endl;
+		delete	p_underlying;
+	}
+	volatility::~volatility()
     {
         std::cout << "volatility destructor" << std::endl;
     }
@@ -17,12 +37,13 @@ namespace dauphine
     {
         return 0.14;
     }
-
+	
+	using volatility_ptr = std::unique_ptr<volatility>;
     volatility* make_volatility()
     {
-        return new volatility;
+        return volatility_ptr(new volatility);
     }
-    */
+   */
 
     // PART 2
     

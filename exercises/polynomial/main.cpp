@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include "polynomial.hpp"
-
+#include <vector>
 /*
  * Compilation for windows users
  * mkdir build
@@ -133,6 +133,8 @@ namespace dauphine
 
 int main(int argc, char* argv[])
 {
+	dauphine::polynomial p(5);
+	dauphine::polynomial p({0.,1.,0.,3.,2.,8.});
     //dauphine::test_constructor();
     //dauphine::test_comparison();
     //dauphine::test_addition();
